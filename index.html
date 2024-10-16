@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Pastelería Artesanal - Creando dulces experiencias">
     <meta name="keywords" content="pastelería, postres, pastelero, dulces, tortas">
-    <meta name="author" content="[Tu Nombre]">
+    <meta name="author" content="Joaquín">
 </head>
 <body>
     <header>
@@ -30,17 +30,24 @@
         <h2>Sobre mí</h2>
         <div class="sobre-mi-contenido">
             <img src="pastelero.jpg" alt="Foto del pastelero">
-            <p>Hola, soy Joaquín, un pastelero apasionado por la creación de postres únicos y deliciosos.</p>
+            <p>¡Hola! Soy Joaquín, y mi pasión es transformar ingredientes en postres irresistibles y únicos. Cada creación está pensada para deleitar los sentidos y hacer de cada bocado una experiencia inolvidable.</p>
         </div>
     </section>
 
     <section id="galeria">
         <h2>Galería</h2>
         <div class="galeria">
-            <img src="imagen1.jpg" alt="Pastel decorado elegantemente">
-            <img src="imagen2.jpg" alt="Selección de postres variados">
-            <img src="imagen3.jpg" alt="Pastelero en acción">
-            <!-- Añade más imágenes según sea necesario -->
+            <img src="imagen1.jpg" alt="Pastel decorado elegantemente" data-index="0">
+            <img src="imagen2.jpg" alt="Selección de postres variados" data-index="1">
+            <img src="imagen3.jpg" alt="Pastel de chocolate" data-index="2">
+            <img src="imagen4.jpg" alt="Cupcakes coloridos" data-index="3">
+            <img src="imagen5.jpg" alt="Tarta de frutas frescas" data-index="4">
+            <img src="imagen6.jpg" alt="Galletas decoradas" data-index="5">
+            <img src="imagen7.jpg" alt="Pastel de bodas" data-index="6">
+            <img src="imagen8.jpg" alt="Postres individuales" data-index="7">
+            <img src="imagen9.jpg" alt="Mesa de dulces" data-index="8">
+            <img src="imagen10.jpg" alt="Pastel temático" data-index="9">
+            <!-- Añade más imágenes según sea necesario, incrementando el data-index -->
         </div>
     </section>
 
@@ -48,14 +55,26 @@
         <h2>Contacto</h2>
         <p>Para pedidos y consultas:</p>
         <ul>
-            <li>Teléfono: [Tu número de teléfono]</li>
-            <li>Email: <a href="mailto:[tuemail@example.com]">[tuemail@example.com]</a></li>
-            <li>Dirección: [Tu dirección]</li>
+            <li>Teléfono: 11-1234-5678</li>
+            <li>Email: <a href="mailto:tuemail@example.com">email@example.com</a></li>
+            <li>Dirección: Av. Cabildo 1234</li>
         </ul>
     </section>
 
     <footer>
         <p>&copy; 2023 Pastelería Artesanal</p>
     </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imagen-modal">
+        <div class="caption" id="caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <!-- Enlazar el archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

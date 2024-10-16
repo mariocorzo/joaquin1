@@ -82,9 +82,9 @@ section p {
 /* Estilos para la sección Inicio */
 #inicio {
     position: relative;
-    padding: 100px 20px;
+    padding: 40px 20px;
     color: #fff; /* Aseguramos que el texto sea blanco puro */
-    background-image: url('fondo.jpg');
+    /* background-image: url('fondo.jpg'); */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -208,5 +208,92 @@ footer p {
     nav ul li {
         display: block;
         margin: 10px 0;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+    color: #bbb;
+}
+
+/* Estilos adicionales para mejorar la visualización en dispositivos móviles */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+    .prev,
+    .next,
+    .close {
+        font-size: 30px;
+        padding: 10px;
     }
 }
