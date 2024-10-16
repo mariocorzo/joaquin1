@@ -1,0 +1,212 @@
+/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Colores principales */
+:root {
+    --color-primario: #f67280;  /* Rosa intenso */
+    --color-secundario: #f8b195; /* Rosa claro */
+    --color-terciario: #355c7d;  /* Azul oscuro */
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Estilos del encabezado y navegación */
+header {
+    background-color: var(--color-secundario);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: var(--color-blanco);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: var(--color-primario);
+}
+
+/* Estilos de secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 40px;
+    color: var(--color-primario);
+    font-size: 2em;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+/* Estilos para la sección Inicio */
+#inicio {
+    position: relative;
+    padding: 100px 20px;
+    color: #fff; /* Aseguramos que el texto sea blanco puro */
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+#inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(53, 92, 125, 0.7); /* Aumentamos la opacidad a 0.7 */
+    z-index: 0;
+}
+
+#inicio h2, #inicio p {
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Aseguramos que el texto sea blanco puro */
+}
+
+#inicio h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Añadimos sombra al texto */
+}
+
+#inicio p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Añadimos sombra al texto */
+}
+
+/* Estilos para la sección Sobre mí */
+.sobre-mi-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Aseguramos que el texto esté centrado en dispositivos móviles */
+}
+
+.sobre-mi-contenido img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Reducimos el margen inferior */
+    object-fit: cover;
+}
+
+/* Ajustes para pantallas más anchas */
+/* @media (min-width: 768px) {
+    .sobre-mi-contenido {
+        flex-direction: row;
+        align-items: center; 
+        text-align: left;
+    }
+
+    .sobre-mi-contenido img {
+        margin-right: 20px; 
+        margin-bottom: 0;   
+    }
+} */
+
+/* Estilos para la Galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border: 5px solid var(--color-secundario);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección Contacto */
+#contacto ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#contacto ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#contacto a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: var(--color-terciario);
+    color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 767px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
